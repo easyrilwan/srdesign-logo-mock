@@ -1,0 +1,149 @@
+/* Global View or Desktop View */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EBEBEB;
+}
+
+header {
+    /* background-color: black; */
+    color: aliceblue;
+    min-height: 100px;
+    max-width: 1024px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container {
+    background-color: rgb(48, 44, 44);
+    min-height: 100px;
+    position: fixed;
+    width: 100%;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* .logo {
+    flex: 2;
+} */
+
+nav a {
+    /* flex: 1; */
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: 1px solid aliceblue;
+    margin-left: 20px;
+}
+
+.container {
+    max-width: 1024px;
+    min-height: 500px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.hide-desktop-only {
+    display: none;
+}
+
+.col {
+    width: 30%;
+    margin-bottom: 40px;
+    background-color: aquamarine;
+}
+
+.col p {
+    color: black;
+    font-size: 0.825rem;
+    padding: 20px 30px;
+    line-height: 1.25rem;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+}
+
+.col p::first-line {
+    font-weight: bold;
+}
+
+.mobile-wrapper {
+    display: none;
+}
+
+footer {
+    background-color: rgb(48, 44, 44);
+    min-height: 100px;
+    max-width: 1024px;
+    margin: 0px auto;
+}
+
+/* Tablet View */
+@media (max-width:768px) {
+    .col {
+        width: 45%;
+    }
+
+    .hide-desktop-only {
+        display: block;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 40px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+        margin-left: 0;
+    }
+
+    .logo {
+        padding: 40px 0px;
+    }
+
+    .mobile-wrapper {
+        display: block;
+        padding-right: 30px;
+    }
+
+    .mobile-nav {
+        display: none;
+        position: absolute;
+        padding-top: 10px;
+    }
+
+    .navbutton {
+        text-decoration: none;
+        color: aliceblue;
+        display: block;
+        background-color: crimson;
+        padding: 15px 30px;
+        margin-left: -70px;
+        text-align: center;
+    }
+
+}
+
+
+/* Mobile View */
+@media (max-width:400px) {
+    .col {
+        width: 100%;
+    }
+}
